@@ -11,7 +11,7 @@ export default function DashboardChart() {
   // função que busca no backend
   const carregarDados = async () => {
     try {
-      const res = await fetch('http://localhost:3001/onibus');
+      const res = await fetch('fetch("https://sptrans-backend.onrender.com/onibus")');
       const json = await res.json();
       const formatado = json.map((o, i) => ({
         name: `${o.linha} - ${o.sentido}`,
